@@ -14,7 +14,7 @@ export default function TeamSection() {
     {
       name: "Esraa Gamal",
       role: "UI - UX Designer",
-      image: "/Place_holder.jpg",
+      image: "/Esraa_Gamal.jpg",
       description:
         "Creative designer crafting our visual identity and user experience across platforms.",
       icon: <Palette className="w-5 h-5" />,
@@ -38,7 +38,7 @@ export default function TeamSection() {
     {
       name: "Reem Badea",
       role: "Frontend Developer",
-      image: "Place_holder.jpg",
+      image: "/Reem.jpg",
       description:
         "Expert in responsive design and interactive data visualization.",
       icon: <Code className="w-5 h-5" />,
@@ -63,7 +63,7 @@ export default function TeamSection() {
     {
       name: "Rewan Mahmoud",
       role: "Backend Developer",
-      image: "Place_holder.jpg",
+      image: "/Rewan.jpg",
       description:
         "Database expert ensuring efficient storage and retrieval of road quality data.",
       icon: <Database className="w-5 h-5" />,
@@ -75,7 +75,7 @@ export default function TeamSection() {
     {
       name: "Rana Reda",
       role: "Backend Developer",
-      image: "Place_holder.jpg",
+      image: "/Rana.jpg",
       description:
         "IoT specialist handling sensor data integration and processing pipelines.",
       icon: <Database className="w-5 h-5" />,
@@ -87,7 +87,7 @@ export default function TeamSection() {
     {
       name: "Alaa Ahmed",
       role: "Flutter Developer",
-      image: "Place_holder.jpg",
+      image: "/Alaa.jpg",
       description:
         "Mobile app developer creating our cross-platform user experience.",
       icon: <Smartphone className="w-5 h-5" />,
@@ -99,7 +99,7 @@ export default function TeamSection() {
     {
       name: "Esraa Mohamed",
       role: "Flutter Developer",
-      image: "Place_holder.jpg",
+      image: "/Esraa_Mohamed.jpg",
       description:
         "Focused on real-time notifications and GPS integration for our mobile app.",
       icon: <Smartphone className="w-5 h-5" />,
@@ -123,7 +123,7 @@ export default function TeamSection() {
     {
       name: "Asmaa Yassin",
       role: "AI Developer",
-      image: "Place_holder.jpg",
+      image: "/Asmaa.jpg",
       description:
         "Focused on predictive analytics and time estimation algorithms.",
       icon: <Code className="w-5 h-5" />,
@@ -160,10 +160,7 @@ export default function TeamSection() {
               >
                 <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto aspect-[3/3] overflow-hidden rounded-lg shadow-lg">
                   <img
-                    src={
-                      member.image ||
-                      "https://randomuser.me/api/portraits/men/1.jpg"
-                    }
+                    src={member.image || "/Place_holder.jpg"}
                     alt={member.name}
                     className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                   />
