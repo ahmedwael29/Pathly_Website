@@ -1,4 +1,5 @@
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import type React from "react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -30,6 +31,7 @@ export default function RootLayout({
         <PageTransition>
           {children}
           <SpeedInsights />
+          <Analytics />
         </PageTransition>
         <ScrollToTop />
       </body>

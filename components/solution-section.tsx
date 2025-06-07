@@ -38,7 +38,7 @@ export default function SolutionSection() {
     <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="container mx-auto px-4">
         <FadeInSection delay={0.1} duration={0.7} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
             How Our System Improves Road Quality and Travel Time
           </h2>
           <p className="text-lg text-slate-300 max-w-3xl mx-auto">
@@ -57,19 +57,23 @@ export default function SolutionSection() {
           {features.map((feature, index) => (
             <HoverCard
               key={index}
-              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700 hover:border-slate-600 transition-all group"
+              className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700 hover:border-slate-600 transition-all group shadow-lg hover:shadow-xl flex flex-col items-center md:items-start text-center md:text-left"
             >
-              <div className="mb-6 p-3 rounded-full bg-slate-800 inline-block group-hover:scale-110 transition-transform duration-300">
+              <div className="mb-6 p-3 rounded-full bg-slate-800 inline-block group-hover:scale-110 transition-transform duration-300 mx-auto md:mx-0">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
-              <p className="text-slate-400">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-white text-center md:text-left">
+                {feature.title}
+              </h3>
+              <p className="text-slate-400 text-center md:text-left">
+                {feature.description}
+              </p>
             </HoverCard>
           ))}
         </StaggeredChildren>
 
         <FadeInSection delay={0.6} duration={0.7} className="mt-16 relative max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center ">
             <div className="order-2 md:order-1">
               <h3 className="text-2xl font-bold mb-4 text-white">Experience Smarter Roads in Action</h3>
               <p className="text-slate-300 mb-6">
@@ -84,7 +88,7 @@ export default function SolutionSection() {
                   "Route-based travel time updates",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-slate-300">
-                    <span className="w-5 h-5 mr-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-xs">
+                    <span className="w-5 h-5 mr-2 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 flex items-center justify-center text-xs">
                       ✓
                     </span>
                     {item}

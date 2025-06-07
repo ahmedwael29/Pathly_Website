@@ -61,7 +61,6 @@ export default function FeaturesSection() {
     <section className="py-20 bg-blue-900/20">
       <div className="container mx-auto px-4">
         <FadeInSection
-          // ref={ref}
           delay={0.1}
           duration={0.7}
           className="text-center mb-16"
@@ -86,7 +85,7 @@ export default function FeaturesSection() {
           {features.map((feature, index) => (
             <HoverCard
               key={index}
-              className="bg-blue-900/30 p-6 rounded-xl border border-blue-800/50 hover:border-blue-700 transition-all group"
+              className="bg-blue-900/30 p-6 rounded-xl border border-blue-800/50 hover:border-blue-700 transition-all group shadow-lg hover:shadow-xl flex flex-col items-center md:items-start text-center md:text-left"
             >
               <div className="mb-4 p-3 rounded-full bg-blue-900/70 inline-block group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}

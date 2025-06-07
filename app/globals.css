@@ -202,7 +202,7 @@
   }
 
   .gradient-text-secondary {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400;
   }
 
   .gradient-text-accent {

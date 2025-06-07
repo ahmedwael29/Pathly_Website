@@ -10,11 +10,11 @@ export default function CareersPage() {
           Careers
         </h1>
         <p className="text-lg text-center text-slate-400 max-w-2xl mx-auto">
-            At SmartRoads, we're at the forefront of revolutionizing
-            transportation. Join a team that's passionate about innovation,
-            collaboration, and impact. Together, we're paving the way for
-            smarter, safer roads.
-          </p>
+          At SmartRoads, we're at the forefront of revolutionizing
+          transportation. Join a team that's passionate about innovation,
+          collaboration, and impact. Together, we're paving the way for smarter,
+          safer roads.
+        </p>
 
         {/* Benefits Section */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto my-12">
@@ -51,7 +51,7 @@ export default function CareersPage() {
             Current Openings
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="bg-blue-900/30 p-6 rounded-lg">
+            <div className="bg-blue-900/30 p-6 rounded-lg text-center md:text-left">
               <h3 className="text-lg font-semibold text-blue-300">
                 AI Developer
               </h3>
@@ -61,12 +61,12 @@ export default function CareersPage() {
               </p>
               <a
                 href="#"
-                className="inline-block mt-4 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+                className="block w-full md:inline-block md:w-auto mt-4 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
               >
                 Apply Now
               </a>
             </div>
-            <div className="bg-blue-900/30 p-6 rounded-lg">
+            <div className="bg-blue-900/30 p-6 rounded-lg text-center md:text-left">
               <h3 className="text-lg font-semibold text-blue-300">
                 IoT Engineer
               </h3>
@@ -76,12 +76,12 @@ export default function CareersPage() {
               </p>
               <a
                 href="#"
-                className="inline-block mt-4 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+                className="block w-full md:inline-block md:w-auto mt-4 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
               >
                 Apply Now
               </a>
             </div>
-            <div className="bg-blue-900/30 p-6 rounded-lg">
+            <div className="bg-blue-900/30 p-6 rounded-lg text-center md:text-left">
               <h3 className="text-lg font-semibold text-blue-300">
                 Data Analyst
               </h3>
@@ -91,7 +91,7 @@ export default function CareersPage() {
               </p>
               <a
                 href="#"
-                className="inline-block mt-4 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
+                className="block w-full md:inline-block md:w-auto mt-4 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition"
               >
                 Apply Now
               </a>

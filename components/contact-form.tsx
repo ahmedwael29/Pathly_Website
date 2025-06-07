@@ -1,71 +1,79 @@
-"use client"
-
-import type React from "react"
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Send, Mail, Phone, MapPin } from "lucide-react"
-import { Facebook, Twitter, Instagram, TiktokIcon } from "@/components/social-icons"
-import FadeInSection from "@/components/fade-in-section"
-import ButtonWithHover from "@/components/button-with-hover"
+"use client";
+import type React from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Send, Mail, Phone, MapPin } from "lucide-react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  TiktokIcon,
+} from "@/components/social-icons";
+import FadeInSection from "@/components/fade-in-section";
+import ButtonWithHover from "@/components/button-with-hover";
 
 export default function ContactForm() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-  })
+  });
 
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    e.preventDefault();
+    setIsSubmitting(true);
 
     setTimeout(() => {
-      console.log("Form submitted:", formData)
-      setIsSubmitting(false)
-      setIsSubmitted(true)
-      setFormData({ name: "", email: "", message: "" })
+      console.log("Form submitted:", formData);
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      setFormData({ name: "", email: "", message: "" });
 
       setTimeout(() => {
-        setIsSubmitted(false)
-      }, 5000)
-    }, 1500)
-  }
+        setIsSubmitted(false);
+      }, 5000);
+    }, 1500);
+  };
 
   return (
     <section id="contact" className="py-20 bg-slate-950">
       <div className="container mx-auto px-4">
         <FadeInSection delay={0.1} duration={0.7} className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400">
               Get In Touch
             </h2>
             <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-              Got questions about our app? Want to share your feedback or suggest a new feature? We're all ears and
-              excited to hear from you to make things even better!
+              Got questions about our app? Want to share your feedback or
+              suggest a new feature? We're all ears and excited to hear from you
+              to make things even better!
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <FadeInSection delay={0.3} duration={0.5} direction="left">
               <div className="bg-slate-900/50 p-8 rounded-xl border border-slate-800 h-full">
-                <h3 className="text-2xl font-bold mb-6 text-white">Contact Information</h3>
-
+                <h3 className="text-2xl font-bold mb-6 text-white">
+                  Contact Information
+                </h3>
                 <div className="space-y-6">
                   <motion.div
                     className="flex items-start"
@@ -115,7 +123,9 @@ export default function ContactForm() {
                 </div>
 
                 <div className="mt-10">
-                  <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>
+                  <h4 className="text-lg font-medium text-white mb-4">
+                    Follow Us
+                  </h4>
                   <div className="flex space-x-4">
                     <motion.a
                       href="#"
@@ -160,7 +170,9 @@ export default function ContactForm() {
 
             <FadeInSection delay={0.4} duration={0.5} direction="right">
               <div className="bg-slate-900/50 p-8 rounded-xl border border-slate-800">
-                <h3 className="text-2xl font-bold mb-6 text-white">Send Us a Message</h3>
+                <h3 className="text-2xl font-bold mb-6 text-white">
+                  Send Us a Message
+                </h3>
 
                 {isSubmitted ? (
                   <motion.div
@@ -171,20 +183,42 @@ export default function ContactForm() {
                     <motion.div
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
-                      transition={{ type: "spring", stiffness: 200, damping: 10, delay: 0.2 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 200,
+                        damping: 10,
+                        delay: 0.2,
+                      }}
                       className="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/20 flex items-center justify-center"
                     >
-                      <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <svg
+                        className="w-8 h-8 text-green-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                     </motion.div>
-                    <h4 className="text-xl font-semibold text-white mb-2">Message Sent!</h4>
-                    <p className="text-slate-300">Thank you for your message. We'll get back to you soon.</p>
+                    <h4 className="text-xl font-semibold text-white mb-2">
+                      Message Sent!
+                    </h4>
+                    <p className="text-slate-300">
+                      Thank you for your message. We'll get back to you soon.
+                    </p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-1">
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium text-slate-300 mb-1"
+                      >
                         Your Name
                       </label>
                       <Input
@@ -199,7 +233,10 @@ export default function ContactForm() {
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-1">
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-medium text-slate-300 mb-1"
+                      >
                         Email Address
                       </label>
                       <Input
@@ -215,7 +252,10 @@ export default function ContactForm() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-1">
+                      <label
+                        htmlFor="message"
+                        className="block text-sm font-medium text-slate-300 mb-1"
+                      >
                         Your Message
                       </label>
                       <Textarea
@@ -231,11 +271,13 @@ export default function ContactForm() {
                     <ButtonWithHover
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white relative"
+                      className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white relative"
                     >
                       {isSubmitting ? (
                         <>
-                          <span className="inline-block animate-pulse">Sending...</span>
+                          <span className="inline-block animate-pulse">
+                            Sending...
+                          </span>
                           <span className="absolute right-4 top-1/2 transform -translate-y-1/2">
                             <svg
                               className="animate-spin h-5 w-5 text-white"
@@ -273,5 +315,5 @@ export default function ContactForm() {
         </FadeInSection>
       </div>
     </section>
-  )
+  );
 }

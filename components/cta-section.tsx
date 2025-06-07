@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Apple, ArrowRight, Download } from "lucide-react";
@@ -13,7 +12,6 @@ export default function CtaSection() {
     threshold: 0.1,
   });
 
-
   return (
     <section className="py-20 bg-slate-900">
       <div className="container mx-auto px-4">
@@ -22,7 +20,9 @@ export default function CtaSection() {
           duration={0.7}
           className="max-w-4xl mx-auto text-center"
         >
-          <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 p-10 rounded-2xl border border-slate-700 relative overflow-hidden">
+          {/*From Blue to Purple gradiant */}
+          {/* <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 p-10 rounded-2xl border border-slate-700 relative overflow-hidden"> */}
+          <div className="bg-gradient-to-r from-blue-600/10 to-blue-400/10 p-10 rounded-2xl border border-slate-700 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full">
               <motion.div
                 className="absolute top-10 left-10 w-40 h-40 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10"
@@ -31,7 +31,6 @@ export default function CtaSection() {
                   opacity: [0.1, 0.15, 0.1],
                 }}
                 transition={{
-                  duration: 8,
                   repeat: Number.POSITIVE_INFINITY,
                   repeatType: "reverse",
                 }}
@@ -62,13 +61,14 @@ export default function CtaSection() {
                 faster, and smarter future.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                 <a
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
                 >
-                  <ButtonWithHover className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-6 text-lg flex items-center gap-2">
+                  <ButtonWithHover className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-6 text-lg flex items-center justify-center gap-2">
                     <Download className="w-5 h-5" />
                     Download for Android
                   </ButtonWithHover>
@@ -77,8 +77,9 @@ export default function CtaSection() {
                   href="https://youtube.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
                 >
-                  <ButtonWithHover className="bg-black hover:bg-gray-900 text-white px-8 py-6 text-lg flex items-center gap-2">
+                  <ButtonWithHover className="w-full sm:w-auto bg-black hover:bg-gray-900 text-white px-8 py-6 text-lg flex items-center justify-center gap-2">
                     <Apple className="w-5 h-5" />
                     Download for iOS
                   </ButtonWithHover>
@@ -112,7 +113,7 @@ export default function CtaSection() {
               <div className="mt-8">
                 <motion.a
                   href="#"
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
                   whileHover={{ x: 5 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >

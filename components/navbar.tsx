@@ -122,8 +122,8 @@ export default function Navbar() {
               href="/"
               className={`block py-2 ${
                 isActive("/")
-                  ? "text-purple-400"
-                  : "text-white hover:text-purple-400"
+                  ? "text-blue-500"
+                  : "text-white hover:text-blue-500"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -133,8 +133,8 @@ export default function Navbar() {
               href="/about"
               className={`block py-2 ${
                 isActive("/about")
-                  ? "text-purple-400"
-                  : "text-white hover:text-purple-400"
+                  ? "text-blue-500"
+                  : "text-white hover:text-blue-500"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -144,8 +144,8 @@ export default function Navbar() {
               href="/terms"
               className={`block py-2 ${
                 isActive("/terms")
-                  ? "text-purple-400"
-                  : "text-white hover:text-purple-400"
+                  ? "text-blue-500"
+                  : "text-white hover:text-blue-500"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -155,8 +155,8 @@ export default function Navbar() {
               href="#contact"
               className={`block py-2 ${
                 isActive("/contact")
-                  ? "text-purple-400"
-                  : "text-white hover:text-purple-400"
+                  ? "text-blue-500"
+                  : "text-white hover:text-blue-500"
               }`}
               onClick={(e) => {
                 e.preventDefault();

@@ -33,7 +33,6 @@ export default function HeroSection() {
             </span>
             <TextReveal
               text="Drive Smart, Stay Safe!"
-              // className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400"
               className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400"
               delay={0.3}
               duration={0.1}
@@ -52,23 +51,28 @@ export default function HeroSection() {
             direction="up"
             className="flex flex-col sm:flex-row gap-4 mt-8"
           >
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <ButtonWithHover className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-6 text-lg">
-                <Download className="mr-2 h-5 w-5" /> Download Now
-              </ButtonWithHover>
-            </a>
-            <Link href="/about">
-              <ButtonWithHover
-                variant="outline"
-                className="border-purple-500 bg-purple-500/10 text-purple-400 hover:text-white hover:bg-purple-500/10 px-8 py-6 text-lg"
+            <div className="w-full sm:w-auto">
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full"
               >
-                <Info className="mr-2 h-5 w-5" /> Learn More
-              </ButtonWithHover>
-            </Link>
+                <ButtonWithHover className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-600 text-white px-8 py-6 text-lg flex items-center justify-center">
+                  <Download className="mr-2 h-5 w-5" /> Download Now
+                </ButtonWithHover>
+              </a>
+            </div>
+            <div className="w-full sm:w-auto">
+              <Link href="/about" className="block w-full">
+                <ButtonWithHover
+                  variant="outline"
+                  className="w-full sm:w-auto border-blue-500 bg-blue-500/10 text-blue-400 hover:text-white hover:bg-blue-500/10 px-8 py-6 text-lg flex items-center justify-center"
+                >
+                  <Info className="mr-2 h-5 w-5" /> Learn More
+                </ButtonWithHover>
+              </Link>
+            </div>
           </FadeInSection>
 
           <FloatingElement
@@ -77,15 +81,15 @@ export default function HeroSection() {
             delay={0.2}
             className="mt-16 relative"
           >
-            <div className="relative border border-slate-800 rounded-3xl overflow-hidden flex items-center justify-center gap-2 p-2 h-[500px]">
-              <div className="w-1/2 h-full overflow-hidden rounded-2xl">
+            <div className="relative border border-slate-800 rounded-3xl overflow-hidden flex flex-col md:flex-row items-center justify-center gap-4 p-2 h-auto md:h-[500px]">
+              <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-auto md:h-full overflow-hidden rounded-2xl">
                 <img
                   src="/main_banner.png"
                   alt="Main Banner"
                   className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
                 />
               </div>
-              <div className="w-1/2 h-full overflow-hidden rounded-2xl">
+              <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-auto md:h-full overflow-hidden rounded-2xl">
                 <img
                   src="/main_banner2.png"
                   alt="Main Banner"
