@@ -1,8 +1,15 @@
 "use client";
 import { useInView } from "react-intersection-observer";
-import { Code, Palette, Database, Smartphone } from "lucide-react";
+import {
+  Code,
+  Palette,
+  Database,
+  Smartphone,
+  Github,
+  Linkedin,
+} from "lucide-react";
+import { FaBehance } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Github, Linkedin } from "lucide-react";
 
 export default function TeamSection() {
   const [ref, inView] = useInView({
@@ -19,8 +26,9 @@ export default function TeamSection() {
         "Creative designer crafting our visual identity and user experience across platforms.",
       icon: <Palette className="w-5 h-5" />,
       social: {
-        github: "#",
-        linkedin: "#",
+        behance: "https://www.behance.net/esraagamal65",
+        linkedin:
+          "https://www.linkedin.com/in/esraa-gamal-89022a268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
     },
     {
@@ -28,7 +36,7 @@ export default function TeamSection() {
       role: "Frontend Developer",
       image: "/Wael.jpg",
       description:
-        "React specialist creating intuitive user interfaces for our web applications.",
+        "Skilled in building scalable web apps using React and Next.js with focus on performance and usability.",
       icon: <Code className="w-5 h-5" />,
       social: {
         github: "https://github.com/ahmedwael29",
@@ -40,14 +48,13 @@ export default function TeamSection() {
       role: "Frontend Developer",
       image: "/Reem.jpg",
       description:
-        "Expert in responsive design and interactive data visualization.",
+        "Experienced in creating responsive layouts and interactive UI components that deliver smooth user experiences.",
       icon: <Code className="w-5 h-5" />,
       social: {
-        github: "#",
+        github: "https://github.com/reembade3",
         linkedin: "#",
       },
     },
-
     {
       name: "Ahmed Ezzat",
       role: "Backend Developer",
@@ -65,11 +72,12 @@ export default function TeamSection() {
       role: "Backend Developer",
       image: "/Rewan.jpg",
       description:
-        "Database expert ensuring efficient storage and retrieval of road quality data.",
+        "Focused on database design and optimization to ensure smooth storage and retrieval of project data.",
       icon: <Database className="w-5 h-5" />,
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/rawanii8",
+        linkedin:
+          "https://www.linkedin.com/in/rawan-abuelnaga-2a2369289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       },
     },
     {
@@ -77,11 +85,12 @@ export default function TeamSection() {
       role: "Backend Developer",
       image: "/Rana.jpg",
       description:
-        "IoT specialist handling sensor data integration and processing pipelines.",
+        "Handles backend logic and integrates sensor data to power real-time features in our system.",
       icon: <Database className="w-5 h-5" />,
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/ranareda66",
+        linkedin:
+          "https://www.linkedin.com/in/rana-reda-3983b3240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
     },
     {
@@ -89,11 +98,12 @@ export default function TeamSection() {
       role: "Flutter Developer",
       image: "/Alaa.jpg",
       description:
-        "Mobile app developer creating our cross-platform user experience.",
+        "Develops cross-platform mobile apps ensuring smooth UI and reliable performance on Android and iOS.",
       icon: <Smartphone className="w-5 h-5" />,
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/AlaaSharshera",
+        linkedin:
+          "https://www.linkedin.com/in/alaasharshera?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
     },
     {
@@ -101,11 +111,11 @@ export default function TeamSection() {
       role: "Flutter Developer",
       image: "/Esraa_Mohamed.jpg",
       description:
-        "Focused on real-time notifications and GPS integration for our mobile app.",
+        "Focuses on integrating GPS and real-time notifications to enhance mobile app functionality.",
       icon: <Smartphone className="w-5 h-5" />,
       social: {
-        github: "#",
-        linkedin: "#",
+        github: "https://github.com/ESRAA7751",
+        linkedin: "https://www.linkedin.com/in/esraa-elsherbini-80785b254",
       },
     },
     {
@@ -113,7 +123,7 @@ export default function TeamSection() {
       role: "AI Developer",
       image: "/Salem.jpg",
       description:
-        "Deep learning expert specializing in computer vision for road defect detection.",
+        "Specializes in deep learning techniques to analyze and predict road conditions using AI models.",
       icon: <Code className="w-5 h-5" />,
       social: {
         github: "https://github.com/A7mad-Salem",
@@ -125,7 +135,7 @@ export default function TeamSection() {
       role: "AI Developer",
       image: "/Asmaa.jpg",
       description:
-        "Focused on predictive analytics and time estimation algorithms.",
+        "Works on developing predictive algorithms and time estimation models to improve project accuracy.",
       icon: <Code className="w-5 h-5" />,
       social: {
         github: "#",
@@ -181,14 +191,25 @@ export default function TeamSection() {
                 <div className="p-6">
                   <p className="text-slate-300 mb-4">{member.description}</p>
                   <div className="flex space-x-3">
-                    <a
-                      href={member.social.github}
-                      className="p-2 bg-blue-900/50 rounded-full text-slate-300 hover:text-blue-300 transition-colors"
-                      aria-label={`${member.name}'s GitHub`}
-                      target="_blank"
-                    >
-                      <Github size={18} />
-                    </a>
+                    {member.name === "Esraa Gamal" ? (
+                      <a
+                        href={member.social.behance}
+                        className="p-2 bg-blue-900/50 rounded-full text-slate-300 hover:text-blue-300 transition-colors"
+                        aria-label={`${member.name}'s Behance`}
+                        target="_blank"
+                      >
+                        <FaBehance size={18} />
+                      </a>
+                    ) : (
+                      <a
+                        href={member.social.github}
+                        className="p-2 bg-blue-900/50 rounded-full text-slate-300 hover:text-blue-300 transition-colors"
+                        aria-label={`${member.name}'s GitHub`}
+                        target="_blank"
+                      >
+                        <Github size={18} />
+                      </a>
+                    )}
                     <a
                       href={member.social.linkedin}
                       className="p-2 bg-blue-900/50 rounded-full text-slate-300 hover:text-blue-300 transition-colors"

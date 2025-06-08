@@ -1,5 +1,4 @@
 "use client";
-
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -60,8 +59,10 @@ export default function PrivacyPage() {
         <section className="space-y-8 text-slate-300">
           {privacyContent.map(({ id, title, content }) => (
             <article key={id}>
-              <h2 className="text-2xl text-blue-300 font-semibold mb-3">{title}</h2>
-              <p className="text-slate-300">{content}</p>
+              <h2 className="text-2xl text-blue-300 font-semibold mb-3">
+                {title}
+              </h2>
+              <p className="text-slate-300 leading-relaxed">{content}</p>
             </article>
           ))}
         </section>

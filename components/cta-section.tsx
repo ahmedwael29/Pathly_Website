@@ -20,8 +20,6 @@ export default function CtaSection() {
           duration={0.7}
           className="max-w-4xl mx-auto text-center"
         >
-          {/*From Blue to Purple gradiant */}
-          {/* <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 p-10 rounded-2xl border border-slate-700 relative overflow-hidden"> */}
           <div className="bg-gradient-to-r from-blue-600/10 to-blue-400/10 p-10 rounded-2xl border border-slate-700 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full">
               <motion.div

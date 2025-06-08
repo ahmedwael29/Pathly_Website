@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { Download, Info } from "lucide-react";
 import Link from "next/link";

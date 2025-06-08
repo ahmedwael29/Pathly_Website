@@ -6,7 +6,7 @@ export default function UpdatesPage() {
     {
       id: 1,
       title: "Improved Real-time Road Condition Detection",
-      date: "May 20, 2025",
+      date: "May 30, 2025",
       description:
         "Enhanced the accuracy and speed of road condition monitoring using advanced IoT sensors and AI algorithms.",
     },
@@ -34,7 +34,7 @@ export default function UpdatesPage() {
     {
       id: 5,
       title: "User Feedback Integration",
-      date: "May 25, 2025",
+      date: "February 5, 2025",
       description:
         "Incorporated user feedback into the system to improve functionality and user experience.",
     },

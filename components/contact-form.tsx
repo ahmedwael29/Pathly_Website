@@ -99,7 +99,7 @@ export default function ContactForm() {
                     </div>
                     <div>
                       <h4 className="text-lg font-medium text-white">Phone</h4>
-                      <p className="text-slate-400">+20 1093570059</p>
+                      <p className="text-slate-400">+20 1234567891</p>
                     </div>
                   </motion.div>
 
@@ -226,7 +226,7 @@ export default function ContactForm() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Ahmed Wael"
+                        placeholder="Ahmed"
                         required
                         className="bg-slate-800 border-slate-700 text-white placeholder:text-slate-500 focus:border-blue-500 transition-colors"
                       />

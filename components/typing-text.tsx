@@ -1,5 +1,4 @@
 "use client"
-
 import { useState, useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 import { cn } from "@/lib/utils"
@@ -33,8 +32,6 @@ export default function TypingText({
 
   useEffect(() => {
     if (!inView) return
-
-    // Delay before starting
     const delayTimeout = setTimeout(() => {
       setIsTyping(true)
     }, delay)

@@ -60,11 +60,7 @@ export default function FeaturesSection() {
   return (
     <section className="py-20 bg-blue-900/20">
       <div className="container mx-auto px-4">
-        <FadeInSection
-          delay={0.1}
-          duration={0.7}
-          className="text-center mb-16"
-        >
+        <FadeInSection delay={0.1} duration={0.7} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text-secondary">
             Powerful Features for Safer Roads
           </h2>

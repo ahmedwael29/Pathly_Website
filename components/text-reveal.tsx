@@ -1,5 +1,4 @@
 "use client"
-
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { cn } from "@/lib/utils"
@@ -71,7 +70,6 @@ export default function TextReveal({
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       className={cn(className)}
-      as={Element}
     >
       {words.map((word, index) => (
         <motion.span key={index} variants={child} style={{ display: "inline-block", marginRight: "0.25em" }}>

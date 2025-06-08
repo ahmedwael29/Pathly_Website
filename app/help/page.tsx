@@ -1,5 +1,4 @@
 "use client";
-
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { useState } from "react";
@@ -9,16 +8,18 @@ export default function HelpPage() {
   const faqs = [
     {
       id: 1,
-      question: "How do I create an account on PATHLY?",
+      question: "What makes PATHLY different from other road quality apps?",
       answer:
-        "To create an account, click on the Sign Up button at the top right corner and fill in your details. You’ll receive a confirmation email to activate your account.",
+        "PATHLY uses real-time sensor data combined with AI analysis to give you the most accurate road condition info and travel time estimates.",
     },
     {
       id: 2,
-      question: "Can I use PATHLY without installing the app?",
+      question:
+        "Do I need to download the PATHLY app to get accurate road updates?",
       answer:
-        "Yes, you can access PATHLY features through our web platform, but installing the app provides better real-time updates and notifications.",
+        "Yes, the app delivers real-time updates and personalized notifications, while the website serves mainly to introduce our features and project vision.",
     },
+
     {
       id: 3,
       question: "How does PATHLY collect road condition data?",
@@ -36,6 +37,31 @@ export default function HelpPage() {
       question: "How can I report a problem with the app?",
       answer:
         "You can report issues via the app’s support section or contact us directly at support@pathly.com.",
+    },
+    {
+      id: 6,
+      question: "Can PATHLY help me plan the fastest route for my trip?",
+      answer:
+        "Yes! PATHLY calculates travel time based on real-time road quality data to help you choose the quickest and safest routes.",
+    },
+    {
+      id: 7,
+      question: "Does PATHLY support both Android and iOS devices?",
+      answer:
+        "Absolutely. Our app is available on both Android and iOS platforms to provide seamless access for all users.",
+    },
+    {
+      id: 8,
+      question:
+        "Will PATHLY notify me about sudden road issues during my journey?",
+      answer:
+        "Yes, the app sends instant notifications for road hazards, traffic jams, and maintenance work to keep you updated on the go.",
+    },
+    {
+      id: 9,
+      question: "Is there a cost to use PATHLY's app and features?",
+      answer:
+        "PATHLY offers core features for free, but to unlock advanced features like detailed analytics and personalized alerts, you’ll need to subscribe to one of our premium plans.",
     },
   ];
 

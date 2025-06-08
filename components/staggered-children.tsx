@@ -1,20 +1,19 @@
-"use client"
-
-import React from "react"
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 interface StaggeredChildrenProps {
-  children: React.ReactNode
-  className?: string
-  containerClassName?: string
-  staggerDelay?: number
-  childrenDelay?: number
-  direction?: "up" | "down" | "left" | "right" | "none"
-  distance?: number
-  duration?: number
-  threshold?: number
-  once?: boolean
+  children: React.ReactNode;
+  className?: string;
+  containerClassName?: string;
+  staggerDelay?: number;
+  childrenDelay?: number;
+  direction?: "up" | "down" | "left" | "right" | "none";
+  distance?: number;
+  duration?: number;
+  threshold?: number;
+  once?: boolean;
 }
 
 export default function StaggeredChildren({
@@ -32,24 +31,24 @@ export default function StaggeredChildren({
   const [ref, inView] = useInView({
     triggerOnce: once,
     threshold,
-  })
+  });
 
   const getDirectionOffset = () => {
     switch (direction) {
       case "up":
-        return { y: distance }
+        return { y: distance };
       case "down":
-        return { y: -distance }
+        return { y: -distance };
       case "left":
-        return { x: distance }
+        return { x: distance };
       case "right":
-        return { x: -distance }
+        return { x: -distance };
       case "none":
-        return {}
+        return {};
       default:
-        return { y: distance }
+        return { y: distance };
     }
-  }
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -60,7 +59,7 @@ export default function StaggeredChildren({
         delayChildren: childrenDelay,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: {
@@ -75,15 +74,15 @@ export default function StaggeredChildren({
         duration,
       },
     },
-  }
+  };
 
   const staggeredChildren = React.Children.map(children, (child) => {
     return (
       <motion.div variants={itemVariants} className={className}>
         {child}
       </motion.div>
-    )
-  })
+    );
+  });
 
   return (
     <motion.div
@@ -95,5 +94,5 @@ export default function StaggeredChildren({
     >
       {staggeredChildren}
     </motion.div>
-  )
+  );
 }
