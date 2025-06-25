@@ -34,7 +34,7 @@ export default function TeamSection() {
     {
       name: "Ahmed Wael",
       role: "Frontend Developer",
-      image: "/Wael.jpg",
+      image: "/Waael.jpg",
       description:
         "Skilled in building scalable web apps using React and Next.js with focus on performance and usability.",
       icon: <Code className="w-5 h-5" />,
