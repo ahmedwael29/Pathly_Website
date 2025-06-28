@@ -1,5 +1,4 @@
 "use client";
-
 import type React from "react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -19,7 +18,6 @@ export default function Navbar() {
   };
 
   const [isContactActive, setIsContactActive] = useState(false);
-
   useEffect(() => {
     const checkContactActive = () => {
       setIsContactActive(window.location.hash === "#contact");
@@ -94,7 +92,7 @@ export default function Navbar() {
               Contact US
             </a>
             <a
-              href="https://youtube.com"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -172,7 +170,7 @@ export default function Navbar() {
               Contact US
             </a>
             <a
-              href="https://youtube.com"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
             >

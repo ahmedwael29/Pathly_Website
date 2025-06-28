@@ -61,7 +61,7 @@ export default function CtaSection() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                 <a
-                  href="https://youtube.com"
+                  href="#"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto"
@@ -72,7 +72,7 @@ export default function CtaSection() {
                   </ButtonWithHover>
                 </a>
                 <a
-                  href="https://youtube.com"
+                  href="#"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto"

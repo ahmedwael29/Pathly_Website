@@ -13,9 +13,7 @@ export default function HeroSection() {
   useEffect(() => {
     setMounted(true);
   }, []);
-
   if (!mounted) return null;
-
   return (
     <section className="relative overflow-hidden py-20 md:py-28">
       <div className="absolute inset-0 z-0">
@@ -52,7 +50,7 @@ export default function HeroSection() {
           >
             <div className="w-full sm:w-auto">
               <a
-                href="https://youtube.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full"
