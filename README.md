@@ -51,6 +51,7 @@ Pathly offers a complete end-to-end solution:
   <li><strong>Frontend:</strong> Next.js, React.js, ReactRouter, TypeScript, Tailwind CSS, Shadcn/UI</li>
   <li><strong>Styling:</strong> Tailwind CSS, Responsive Design</li>
   <li><strong>UI Components:</strong> Shadcn</li>
+  <li><strong>Deploying and Hosting:</strong> Vercel</li>
   <li><strong>Version Control:</strong> Git, GitHub</li>
 </ul>
 
